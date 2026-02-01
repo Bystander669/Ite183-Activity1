@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My CV</title>
+    <title>John Orly Nabre | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +27,7 @@
         class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo"
       >
         <li><a href="#top">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About me</a></li>
         <li><a href="#contact">Contact me</a></li>
         <li><a href="#socials" onclick="closeMenu()">Socials</a></li>
@@ -50,6 +51,7 @@
           <img src="./images/close.png" class="w-5 cursor-pointer" />
         </div>
         <li><a href="#top" onclick="closeMenu()">Home</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
         <li><a href="#about" onclick="closeMenu()">About me</a></li>
         <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
         <li><a href="#socials" onclick="closeMenu()">Socials</a></li>
@@ -75,19 +77,21 @@
       </div>
 
       <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 font-Ovo">
-        Hello my name is John Orly Nabre
-        <img src="./images/waving.png" alt="" class="w-5" />
+        Hello! I am <img src="./images/waving.png" alt="" class="w-5" />
       </h3>
-      <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-        student from MSU
+      <h1 class="text-4xl sm:text-7xl lg:text-[80px] font-Ovo font-bold">
+        John Orly Nabre
       </h1>
+      <h2 class="text-xl sm:text-3xl font-Ovo text-gray-700">
+        IT Student at MSU
+      </h2>
       <p class="max-w-2xl mx-auto font-Ovo">
         I am a Bachelor of Science in Information Technology student at Mindanao
         State University, with a major in Computer Networks
       </p>
       <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a
-          href="mailto:johnorly.nabre@msugensan.edu.ph"
+          href="mailto:njohnorly69@gmail.com"
           class="px-10 py-3 border rounded-full text-white bg-gradient-to-r from-[#b820e6] to-[#da7a20] text-wrap flex items-center gap-3"
           >Hire me
           <img
@@ -99,6 +103,172 @@
         </a>
       </div>
     </div>
+    <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg font-Ovo">My Portfolio</h4>
+      <h2 class="text-center text-5xl font-Ovo mb-10">Latest Projects</h2>
+
+      <div class="relative group">
+        <button
+          onclick="scrollProjects('left')"
+          class="absolute left-[-60px] top-1/2 -translate-y-1/2 z-10 bg-white/60 p-4 rounded-full border border-gray-300 hover:bg-white shadow-md transition hidden lg:block"
+          aria-label="Scroll Left"
+        >
+          <img src="./images/north_east.png" class="w-5 -rotate-180" />
+        </button>
+
+        <div
+          id="projectSlider"
+          class="flex overflow-x-auto gap-8 pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth"
+        >
+          <div class="min-w-full snap-center">
+            <div
+              class="border border-gray-400 rounded-3xl p-8 hover:bg-white/30 duration-500 shadow-sm"
+            >
+              <div
+                class="bg-slate-200/50 rounded-2xl h-56 mb-6 flex items-center justify-center"
+              >
+                <img
+                  src="./images/admisu.png"
+                  class="w-80 opacity-80"
+                  alt="Chatbot Icon"
+                />
+              </div>
+              <h3 class="text-3xl font-bold font-Ovo mb-2">adMISU Chatbot</h3>
+              <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                My Capstone Project. An AI-powered LLM chatbot designed to
+                assist with admissions inquiries at MSU-GSC. Features include
+                ticket management and administrative support for automated
+                student guidance.
+              </p>
+              <a
+                href="https://msu-admissions.vercel.app/"
+                target="_blank"
+                class="flex items-center gap-2 text-[#b820e6] font-semibold w-max"
+              >
+                Live Demo <img src="./images/north_east.png" class="w-4" />
+              </a>
+            </div>
+          </div>
+
+          <div class="min-w-full snap-center">
+            <div
+              class="border border-gray-400 rounded-3xl p-8 hover:bg-white/30 duration-500 shadow-sm"
+            >
+              <div
+                class="bg-slate-200/50 rounded-2xl h-56 mb-6 flex items-center justify-center"
+              >
+                <img
+                  src="./images/chirp.png"
+                  class="w-80 opacity-80"
+                  alt="Next.js Icon"
+                />
+              </div>
+              <h3 class="text-3xl font-bold font-Ovo mb-2">
+                Chirp – Social Media Clone
+              </h3>
+              <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                A Twitter-like application built with Next.js (App Router) and
+                Supabase. Supports GitHub Auth, real-time posting, likes, and
+                full CRUD functionality for messages.
+              </p>
+              <a
+                href="https://socmedclone.netlify.app/"
+                target="_blank"
+                class="flex items-center gap-2 text-[#b820e6] font-semibold w-max"
+              >
+                View App <img src="./images/north_east.png" class="w-4" />
+              </a>
+            </div>
+          </div>
+
+          <div class="min-w-full snap-center">
+            <div
+              class="border border-gray-400 rounded-3xl p-8 hover:bg-white/30 duration-500 shadow-sm"
+            >
+              <div
+                class="bg-slate-200/50 rounded-2xl h-56 mb-6 flex items-center justify-center"
+              >
+                <img
+                  src="./images/mock.png"
+                  class="w-80 opacity-80"
+                  alt="AI Icon"
+                />
+              </div>
+              <h3 class="text-3xl font-bold font-Ovo mb-2">
+                AI Mock Interviewer
+              </h3>
+              <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                An intelligent interview preparation tool that generates
+                technical questions, evaluates user responses, and provides
+                constructive feedback to improve performance.
+              </p>
+              <a
+                href="https://mock-inter.netlify.app/"
+                target="_blank"
+                class="flex items-center gap-2 text-[#b820e6] font-semibold w-max"
+              >
+                Try Tool <img src="./images/north_east.png" class="w-4" />
+              </a>
+            </div>
+          </div>
+
+          <div class="min-w-full snap-center">
+            <div
+              class="border border-gray-400 rounded-3xl p-8 hover:bg-white/30 duration-500 shadow-sm"
+            >
+              <div
+                class="bg-slate-200/50 rounded-2xl h-56 mb-6 flex items-center justify-center"
+              >
+                <img
+                  src="./images/datatables.png"
+                  class="w-80 opacity-80"
+                  alt="Database Icon"
+                />
+              </div>
+              <h3 class="text-3xl font-bold font-Ovo mb-2">
+                DataTables Integration
+              </h3>
+              <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                A specialized project focused on data management and display
+                practices. Implements advanced filtering, sorting, and search
+                functionality using DataTables.
+              </p>
+              <a
+                href="https://bystander669.github.io/CV/datatables.html"
+                target="_blank"
+                class="flex items-center gap-2 text-[#b820e6] font-semibold w-max"
+              >
+                View Practice <img src="./images/north_east.png" class="w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <button
+          onclick="scrollProjects('right')"
+          class="absolute right-[-60px] top-1/2 -translate-y-1/2 z-10 bg-white/60 p-4 rounded-full border border-gray-300 hover:bg-white shadow-md transition hidden lg:block"
+          aria-label="Scroll Right"
+        >
+          <img src="./images/north_east.png" class="w-5" />
+        </button>
+      </div>
+
+      <p class="text-center text-gray-500 text-sm mt-4 lg:hidden">
+        &larr; Swipe to view projects &rarr;
+      </p>
+    </div>
+
+    <script>
+      function scrollProjects(direction) {
+        const slider = document.getElementById("projectSlider");
+        const scrollAmount = slider.clientWidth;
+        if (direction === "left") {
+          slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        } else {
+          slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      }
+    </script>
 
     <!--about me-->
     <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
@@ -277,7 +447,7 @@
         /></a>
         <div class="w-max flex items-center gap-2 mx-auto font-Ovo">
           <img src="./images/mail.png" alt="" class="w-6" />
-          johnorly.nabre@msugensan.edu.ph
+          njohnorly69@gmail.com
         </div>
       </div>
       <div
@@ -287,7 +457,7 @@
           <img src="images/copyright.png" alt="" class="w-5" /> 2024
         </p>
         <ul
-          class="flex items-center gap-10 justify-center mt-4 sm:mt-0 font-Ovo items-center"
+          class="flex items-center gap-10 justify-center mt-4 sm:mt-0 font-Ovo"
         >
           <li>
             <a
